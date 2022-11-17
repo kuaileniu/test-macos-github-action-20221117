@@ -3,7 +3,7 @@ name: Go package
 on: [push]
 
 jobs:
-   build-macos:
+   build-macos-amd-x64:
       name: Build(macos-latest)
       runs-on: macos-latest
       steps:
