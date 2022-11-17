@@ -21,7 +21,7 @@ jobs:
                 go get -v -t -d ./...                
         - name: Download dependency
           run: go mod tidy
-        - name: Go Build(ubuntu)
+        - name: Go Build
           run: go build -v ./...
  
         - name : upload execution
