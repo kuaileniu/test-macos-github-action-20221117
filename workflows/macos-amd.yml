@@ -19,7 +19,7 @@ jobs:
         - name: Get dependencies
           run: |
                 go env -w GOPRIVATE="github.com/kuaileniu"
-                git config --global url."https://kuaileniu:${{ secrets.ACTION_CLONE_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"
+                git config --global url."https://kuaileniu:${{ secrets.ACTION_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"
                 go get -v -t -d ./...                 
         - name: Download dependency
           run: go mod tidy
