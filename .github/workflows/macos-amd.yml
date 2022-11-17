@@ -21,7 +21,7 @@ jobs:
                 go get -v -t -d ./...                
         - name: Download dependency
           run: go mod tidy
-        - name: Go Build
+        - name: Go Build(ubuntu)
           run: go build -v ./...
  
         - name : upload execution
@@ -32,6 +32,6 @@ jobs:
             # (若干多个build时，此名称相同，则合并打包到一个zip中)
             name: action-macos-amd
             # 将 action打包到 action1.1.zip中并把 action1.1.zip 上传到github的本次action的Artifacts下
-            path: goaction 
+            path: ${{ github.workspace }}/goaction 
         
  
